@@ -16,7 +16,7 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: role
+          role-to-assume: Role
           aws-region: ca-central-1
 
       - run: aws s3 sync . s3://hg-event-test-website-uoguelph --delete --exclude ".git/*" --exclude ".github/*"
